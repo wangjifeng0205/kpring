@@ -2,7 +2,6 @@ package net.wangjifeng.kpring.service.autoconfiguration.knum
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConstructorBinding
-import org.springframework.stereotype.Component
 
 /**
  * @author: wjf
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component
  *
  * @see KnumProperties knum的配置属性。
  */
-@Component
 @ConstructorBinding
 @ConfigurationProperties(prefix = "net.wangjifeng.knum")
 data class KnumProperties(
