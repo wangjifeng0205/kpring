@@ -7,8 +7,6 @@ y
 Ikpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/Knum.kt,e\3\e3bbe19904a1d000a1420c4f2362c8d7a23b2c8d
 
 Okpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumFinder.kt,0\5\05f257ab52e5d672addcd34faaf5d42ddea6db58
-…
-Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
 M
 kpring-cloud/kpring-cloud.iml,2\1\21461f39955b746e90077c58a5cb2a7692fa19f1
 o
