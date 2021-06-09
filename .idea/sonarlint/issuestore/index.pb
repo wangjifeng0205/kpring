@@ -3,12 +3,8 @@
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 7
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
-y
-Ikpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/Knum.kt,e\3\e3bbe19904a1d000a1420c4f2362c8d7a23b2c8d
 
 Okpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumFinder.kt,0\5\05f257ab52e5d672addcd34faaf5d42ddea6db58
-M
-kpring-cloud/kpring-cloud.iml,2\1\21461f39955b746e90077c58a5cb2a7692fa19f1
 o
 ?.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml,9\6\962ba66301d4387686a24686e00d76e409796162
 l
@@ -213,8 +209,6 @@ r
 B.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml,2\9\291cabce2492e17944709776b097627d63896412
 b
 2.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml,c\f\cfcec4f886d01e59d2f1ece727cb4a6637c54469
-D
-kpring-cloud/pom.xml,4\3\43274f6a6c54df36c6c64d80212ba936232b9693
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 Q

@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize
  *
  * @see Knum K枚举接口，用于特定枚举的序列化。
  */
-
 @JsonSerialize(using = KnumJsonSerializer::class)
 @JsonDeserialize(using = KnumJsonDeserializer::class)
 interface Knum {
