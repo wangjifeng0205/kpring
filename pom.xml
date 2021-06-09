@@ -45,6 +45,16 @@
                 <artifactId>kpring-commons</artifactId>
                 <version>${subproject.version}</version>
             </dependency>
+            <dependency>
+                <groupId>net.wangjifeng.kpring</groupId>
+                <artifactId>kpring-service</artifactId>
+                <version>${subproject.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.wangjifeng.kpring</groupId>
+                <artifactId>kpring-cloud</artifactId>
+                <version>${subproject.version}</version>
+            </dependency>
             <!--第三方依赖-->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
