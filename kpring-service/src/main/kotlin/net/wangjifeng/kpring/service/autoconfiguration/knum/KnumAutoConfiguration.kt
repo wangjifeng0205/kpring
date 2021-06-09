@@ -20,7 +20,6 @@ import org.springframework.context.annotation.Configuration
  */
 @Configuration
 @EnableConfigurationProperties(KnumProperties::class)
-@ConditionalOnMissingBean(value = [KnumProperties::class])
 class KnumAutoConfiguration(var knumProperties: KnumProperties) : KnumFinder {
 
     override fun finding(): Map<String, List<Knum>> {
