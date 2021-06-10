@@ -1,5 +1,7 @@
 package net.wangjifeng.kpring.service.controller
 
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
 import net.wangjifeng.kpring.commons.knum.Knum
 import net.wangjifeng.kpring.commons.knum.KnumFinder
 import org.springframework.web.bind.annotation.RequestMapping
@@ -14,12 +16,14 @@ import javax.annotation.Resource
  */
 @RestController
 @RequestMapping("/knum")
+@Api(tags = ["knum"])
 class KnumController {
 
     @Resource
     private lateinit var knumFinder: KnumFinder
 
     @RequestMapping("/knums")
+    @ApiOperation(value = "knums", httpMethod = "GET", notes = "knums")
     fun knums(): Map<String, List<Knum>> {
         return knumFinder.finding()
     }

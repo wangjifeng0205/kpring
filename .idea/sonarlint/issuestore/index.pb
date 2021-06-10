@@ -161,15 +161,9 @@ Z.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigur
 T.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml,d\a\da0ccda4bf08747d77fb28b435047071838a134d
 …
 Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
-•
-ekpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/knum/KnumProperties.kt,0\1\01767013a7125c2735a9310196ee35bddfa80069
 „
 Tkpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/feign/FeignContainer.kt,3\f\3f6c76944e1ffa63bd332f48913a9190f1121ab9
 y
 Ikpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/Knum.kt,e\3\e3bbe19904a1d000a1420c4f2362c8d7a23b2c8d
-‰
-Ykpring-service/src/main/kotlin/net/wangjifeng/kpring/service/controller/KnumController.kt,d\2\d2666acdabf00292ccc74d78575459a5f7af43e9
 
 Okpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumFinder.kt,0\5\05f257ab52e5d672addcd34faaf5d42ddea6db58
-œ
-lkpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/knum/KnumAutoConfiguration.kt,c\9\c971afe699defde53b3f77a3a495b34e7a955780

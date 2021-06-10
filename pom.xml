@@ -41,6 +41,7 @@
         <lsf4j.version>1.7.30</lsf4j.version>
         <http4k.version>4.3.4.1</http4k.version>
         <httpclient.version>4.5.13</httpclient.version>
+        <springfox.version>3.0.0</springfox.version>
 
         <!--插件-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -137,6 +138,11 @@
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
                 <version>${httpclient.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
             </dependency>
 
             <!--kotlin相关标准或扩展依赖-->
