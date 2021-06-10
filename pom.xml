@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.0</version>
+        <version>2.3.10.RELEASE</version>
     </parent>
 
     <properties>
@@ -30,7 +30,7 @@
         <jackson-kotlin.version>2.12.3</jackson-kotlin.version>
         <reflections.version>0.9.12</reflections.version>
         <nacos.version>1.4.2</nacos.version>
-        <springcloud-openfeign.version>3.0.3</springcloud-openfeign.version>
+        <springcloud-openfeign.version>2.2.8.RELEASE</springcloud-openfeign.version>
         <mysql.version>8.0.25</mysql.version>
         <postgresql.version>42.2.20</postgresql.version>
         <druid-springboot.version>1.2.6</druid-springboot.version>
@@ -39,6 +39,8 @@
         <aspectjweaver.version>1.9.6</aspectjweaver.version>
         <xxl-job.version>2.3.0</xxl-job.version>
         <lsf4j.version>1.7.30</lsf4j.version>
+        <http4k.version>4.3.4.1</http4k.version>
+        <httpclient.version>4.5.13</httpclient.version>
 
         <!--插件-->
         <maven.compiler.version>3.8.1</maven.compiler.version>
@@ -126,6 +128,17 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.http4k</groupId>
+                <artifactId>http4k</artifactId>
+                <version>${http4k.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
             <!--kotlin相关标准或扩展依赖-->
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>

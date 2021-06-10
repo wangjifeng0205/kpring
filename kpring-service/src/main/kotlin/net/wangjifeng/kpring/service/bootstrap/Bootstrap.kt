@@ -16,7 +16,8 @@ import org.springframework.context.annotation.Configuration
 @Configuration
 @ComponentScan(
     basePackages = [
-        "net.wangjifeng.kpring.service"
+        "net.wangjifeng.kpring.service",
+        "net.wangjifeng.kpring.cloud",
     ]
 )
 class Bootstrap
