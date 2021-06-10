@@ -45,7 +45,7 @@ class DefaultSwaggerDefiner : SwaggerDefiner {
         return ApiInfoBuilder()
             .title(applicationName)
             .description(applicationName)
-            .termsOfServiceUrl("https://${serverAddress}:${serverPort}${contextPath}/swagger-ui/index.html")
+            .termsOfServiceUrl("http://${serverAddress}:${serverPort}${contextPath}/swagger-ui/index.html")
             .contact(Contact("wangjifeng", "https://wangjifeng.net", "wangjifeng0205@qq.com"))
             .version("3.0.0")
             .build()
