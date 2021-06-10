@@ -159,16 +159,10 @@ k
 Z.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml,5\e\5e982755d76c8d0d443ba2383ee6cb8142afea99
 Ñ
 T.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml,d\a\da0ccda4bf08747d77fb28b435047071838a134d
-F
-kpring-service/pom.xml,0\2\02da55c88af9d6b362d18d01431e50ef9afe7f8a
 Ö
 Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
-F
-kpring-commons/pom.xml,3\a\3ab143e5cfb74c958b0a524ce07f5f11caad5715
 ï
 ekpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/knum/KnumProperties.kt,0\1\01767013a7125c2735a9310196ee35bddfa80069
-Å
-Qkpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/feign/FeignClient.kt,6\3\63020a80d0d894b45fc5336d5c4f32c3e0f83a10
 Ñ
 Tkpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/feign/FeignContainer.kt,3\f\3f6c76944e1ffa63bd332f48913a9190f1121ab9
 y
