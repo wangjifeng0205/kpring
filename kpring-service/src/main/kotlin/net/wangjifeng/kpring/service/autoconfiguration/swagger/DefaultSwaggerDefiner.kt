@@ -26,6 +26,8 @@ class DefaultSwaggerDefiner : SwaggerDefiner {
 
     var serverPort: String = ""
 
+    var contextPath: String = ""
+
     override fun definition(): Docket {
         return Docket(DocumentationType.OAS_30)
             .apiInfo(apiInfo())
@@ -43,7 +45,7 @@ class DefaultSwaggerDefiner : SwaggerDefiner {
         return ApiInfoBuilder()
             .title(applicationName)
             .description(applicationName)
-            .termsOfServiceUrl("https://${serverAddress}:${serverPort}/swagger-ui.html")
+            .termsOfServiceUrl("https://${serverAddress}:${serverPort}/${contextPath}/swagger-ui/index.html")
             .contact(Contact("wangjifeng", "https://wangjifeng.net", "wangjifeng0205@qq.com"))
             .version("3.0.0")
             .build()

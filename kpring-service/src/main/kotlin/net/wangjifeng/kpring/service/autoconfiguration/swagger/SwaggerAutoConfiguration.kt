@@ -21,6 +21,8 @@ class SwaggerAutoConfiguration(var swaggerDefiner: SwaggerDefiner = DefaultSwagg
     private lateinit var serverAddress: String
     @Value("\${server.port}")
     private lateinit var serverPort: String
+    @Value("\${server.servlet.context-path}")
+    private lateinit var contextPath: String
 
     @Bean
     fun initDocket(): Docket {
@@ -29,6 +31,7 @@ class SwaggerAutoConfiguration(var swaggerDefiner: SwaggerDefiner = DefaultSwagg
             defaultSwaggerDefiner.applicationName = applicationName
             defaultSwaggerDefiner.serverAddress = serverAddress
             defaultSwaggerDefiner.serverPort = serverPort
+            defaultSwaggerDefiner.contextPath = contextPath
         }
         return swaggerDefiner.definition()
     }
