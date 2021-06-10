@@ -161,8 +161,6 @@ Z.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigur
 T.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml,d\a\da0ccda4bf08747d77fb28b435047071838a134d
 …
 Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
-„
-Tkpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/feign/FeignContainer.kt,3\f\3f6c76944e1ffa63bd332f48913a9190f1121ab9
 y
 Ikpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/Knum.kt,e\3\e3bbe19904a1d000a1420c4f2362c8d7a23b2c8d
 

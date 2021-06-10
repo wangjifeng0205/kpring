@@ -42,6 +42,7 @@ class FeignClientAutoConfiguration(override val feignClientCenter: MutableList<F
                 .encoder(encoder)
                 .decoder(decoder)
                 .contract(SpringMvcContract())
+                .requestInterceptors(feignClient.requestInterceptor)
                 .target(feignClient.clazz.java, feignClient.url)
         }
     }

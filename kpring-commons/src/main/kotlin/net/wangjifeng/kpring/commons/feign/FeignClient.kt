@@ -1,5 +1,7 @@
 package net.wangjifeng.kpring.commons.feign
 
+import feign.Capability
+import feign.RequestInterceptor
 import kotlin.reflect.KClass
 
 /**
@@ -17,6 +19,10 @@ data class FeignClient<T : Any>(
      * feignClient的url
      */
     var url: String,
+    /**
+     * 请求拦截器
+     */
+    var requestInterceptor: MutableList<RequestInterceptor> = mutableListOf(),
     /**
      * feignClient
      */
