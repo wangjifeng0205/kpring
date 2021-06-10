@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiOperation
 import net.wangjifeng.kpring.service.swagger.SwaggerDefiner
 import org.reflections.util.Utils
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.stereotype.Component
 import springfox.documentation.builders.ApiInfoBuilder
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
@@ -19,12 +20,11 @@ import springfox.documentation.spring.web.plugins.Docket
  */
 class DefaultSwaggerDefiner : SwaggerDefiner {
 
-    @Value("\${spring.application.name}")
-    private lateinit var applicationName: String
-    @Value("\${server.address}")
-    private lateinit var serverAddress: String
-    @Value("\${server.port}")
-    private lateinit var serverPort: String
+    var applicationName: String = ""
+
+    var serverAddress: String = ""
+
+    var serverPort: String = ""
 
     override fun definition(): Docket {
         return Docket(DocumentationType.OAS_30)
@@ -39,13 +39,13 @@ class DefaultSwaggerDefiner : SwaggerDefiner {
             .build()
     }
 
-    private fun apiInfo(): ApiInfo? {
+    private fun apiInfo(): ApiInfo {
         return ApiInfoBuilder()
             .title(applicationName)
             .description(applicationName)
             .termsOfServiceUrl("https://${serverAddress}:${serverPort}/swagger-ui.html")
             .contact(Contact("wangjifeng", "https://wangjifeng.net", "wangjifeng0205@qq.com"))
-            .version("2.0")
+            .version("3.0.0")
             .build()
     }
 
