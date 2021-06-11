@@ -17,10 +17,10 @@ class SwaggerAutoConfiguration(var swaggerDefiner: SwaggerDefiner = DefaultSwagg
 
     @Value("\${spring.application.name}")
     private lateinit var applicationName: String
-    @Value("\${server.address}")
-    private lateinit var serverAddress: String
+
     @Value("\${server.port}")
     private lateinit var serverPort: String
+
     @Value("\${server.servlet.context-path}")
     private lateinit var contextPath: String
 
@@ -29,7 +29,6 @@ class SwaggerAutoConfiguration(var swaggerDefiner: SwaggerDefiner = DefaultSwagg
         if (swaggerDefiner is DefaultSwaggerDefiner) {
             val defaultSwaggerDefiner = swaggerDefiner as DefaultSwaggerDefiner
             defaultSwaggerDefiner.applicationName = applicationName
-            defaultSwaggerDefiner.serverAddress = serverAddress
             defaultSwaggerDefiner.serverPort = serverPort
             defaultSwaggerDefiner.contextPath = contextPath
         }

@@ -1,6 +1,5 @@
 package net.wangjifeng.kpring.commons.feign
 
-import feign.Capability
 import feign.RequestInterceptor
 import kotlin.reflect.KClass
 

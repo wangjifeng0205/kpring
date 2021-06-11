@@ -20,7 +20,8 @@ import javax.annotation.Resource
  * @see FeignClientAutoConfiguration feignClient的自动配置。
  */
 @Configuration
-class FeignClientAutoConfiguration(override val feignClientCenter: MutableList<FeignClient<*>> = mutableListOf()) : FeignContainer, ApplicationRunner, Ordered {
+class FeignClientAutoConfiguration(override val feignClientCenter: MutableList<FeignClient<*>> = mutableListOf()) :
+    FeignContainer, ApplicationRunner, Ordered {
 
     @Resource
     private lateinit var encoder: Encoder

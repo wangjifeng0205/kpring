@@ -3,8 +3,6 @@ package net.wangjifeng.kpring.service.autoconfiguration.swagger
 import io.swagger.annotations.ApiOperation
 import net.wangjifeng.kpring.service.swagger.SwaggerDefiner
 import org.reflections.util.Utils
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.stereotype.Component
 import springfox.documentation.builders.ApiInfoBuilder
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
@@ -13,6 +11,7 @@ import springfox.documentation.service.Contact
 import springfox.documentation.service.RequestParameter
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
+import java.net.InetAddress
 
 /**
  * @author: wjf
@@ -21,8 +20,6 @@ import springfox.documentation.spring.web.plugins.Docket
 class DefaultSwaggerDefiner : SwaggerDefiner {
 
     var applicationName: String = ""
-
-    var serverAddress: String = ""
 
     var serverPort: String = ""
 
@@ -42,10 +39,11 @@ class DefaultSwaggerDefiner : SwaggerDefiner {
     }
 
     private fun apiInfo(): ApiInfo {
+
         return ApiInfoBuilder()
             .title(applicationName)
             .description(applicationName)
-            .termsOfServiceUrl("http://${serverAddress}:${serverPort}${contextPath}/swagger-ui/index.html")
+            .termsOfServiceUrl("http://${InetAddress.getLocalHost().hostAddress}:${serverPort}${contextPath}/swagger-ui/index.html")
             .contact(Contact("wangjifeng", "https://wangjifeng.net", "wangjifeng0205@qq.com"))
             .version("3.0.0")
             .build()
