@@ -1,0 +1,32 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="kotlin" targetRuntime="MyBatis3Kotlin">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/admin_db?useUnicode=true&amp;characterEncoding=UTF-8&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="net.wangjifeng.server.entity" targetProject="src/main/kotlin">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <javaClientGenerator targetPackage="net.wangjifeng.server.mapper" targetProject="src/main/kotlin" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="s_user" domainObjectName="User">
+            <columnOverride column="sex" javaType="net.wangjifeng.server.enums.Sex"/>
+            <columnOverride column="user_type" javaType="net.wangjifeng.server.enums.UserType"/>
+            <columnOverride column="account_status" javaType="net.wangjifeng.server.enums.AccountStatus"/>
+        </table>
+    </context>
+</generatorConfiguration>

@@ -159,8 +159,6 @@ k
 Z.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_2_0.xml,5\e\5e982755d76c8d0d443ba2383ee6cb8142afea99
 „
 T.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_2_0.xml,d\a\da0ccda4bf08747d77fb28b435047071838a134d
-…
-Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
 y
 Ikpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/Knum.kt,e\3\e3bbe19904a1d000a1420c4f2362c8d7a23b2c8d
 
@@ -289,17 +287,9 @@ n
 V.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml,1\9\192a9b2fe94c1ba0eb2ad9e840b48e892cdbe23a
 Š
 Z.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_2_0_0_RELEASE.xml,9\9\994eb69dd43c4d1e88220a9634d3be824f9c06d0
-F
-kpring-service/pom.xml,0\2\02da55c88af9d6b362d18d01431e50ef9afe7f8a
-D
-kpring-cloud/pom.xml,4\3\43274f6a6c54df36c6c64d80212ba936232b9693
-M
-kpring-cloud/kpring-cloud.iml,2\1\21461f39955b746e90077c58a5cb2a7692fa19f1
 Q
 !kpring-commons/kpring-commons.iml,c\a\cab43ca23e404a8a2fe83da2ef0ada7299ebd1ec
 Q
 !kpring-service/kpring-service.iml,6\9\698c23f4cc7d296681c4d865765f98e839d1e1d2
 F
 kpring-commons/pom.xml,3\a\3ab143e5cfb74c958b0a524ce07f5f11caad5715
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
