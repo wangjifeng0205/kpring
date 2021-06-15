@@ -9,6 +9,7 @@
         <module name="kpring-commons" />
         <module name="kpring-service" />
         <module name="kpring-cloud" />
+        <module name="kpring-datasource" />
         <module name="kpring-generator" />
       </profile>
     </annotationProcessing>
