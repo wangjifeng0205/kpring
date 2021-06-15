@@ -313,16 +313,12 @@ Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/feign/FeignContain
 rkpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/swagger/SwaggerAutoConfiguration.kt,3\1\31b89454b5c74c5f454cc275cf02b87f42853dd6
 …
 Ukpring-commons/src/main/kotlin/net/wangjifeng/kpring/commons/knum/KnumSerializable.kt,8\3\83a7078395bade7d7dd54658ab92433674c6d1b1
-D
-kpring-cloud/pom.xml,4\3\43274f6a6c54df36c6c64d80212ba936232b9693
 F
 kpring-service/pom.xml,0\2\02da55c88af9d6b362d18d01431e50ef9afe7f8a
 •
 ekpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/knum/KnumProperties.kt,0\1\01767013a7125c2735a9310196ee35bddfa80069
 œ
 lkpring-service/src/main/kotlin/net/wangjifeng/kpring/service/autoconfiguration/knum/KnumAutoConfiguration.kt,c\9\c971afe699defde53b3f77a3a495b34e7a955780
-M
-kpring-cloud/kpring-cloud.iml,2\1\21461f39955b746e90077c58a5cb2a7692fa19f1
 U
 %kpring-generator/kpring-generator.iml,6\8\688fd414ffb03a20bfc9db5781b8b2dd65cd8dc5
 v
@@ -336,3 +332,7 @@ H
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+‡
+Wkpring-datasource/src/main/kotlin/net/wangjifeng/kpring/datasource/DataSourceContext.kt,a\c\acc8286d779192e1ec020962cf45a2f9cc987bb7
+I
+kpring-datasource/pom.xml,0\5\053d016d1411bb4860b8fb8cd9bc4286eb7cdab5
