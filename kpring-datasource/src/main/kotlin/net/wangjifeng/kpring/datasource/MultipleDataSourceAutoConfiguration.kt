@@ -33,6 +33,9 @@ class MultipleDataSourceAutoConfiguration(var multipleDataSourceProperties: Mult
     @Resource
     private lateinit var dataSourceContext: DataSourceContext
 
+    @Resource(name = "net.wangjifeng.kpring.datasource.MultipleDataSource\$interval")
+    private lateinit var multipleDataSource: MultipleDataSource
+
     override fun run(args: ApplicationArguments?) {
         val validationQuery = multipleDataSourceProperties.validationQuery
         for (dataSource in multipleDataSourceProperties.dataSources) {
@@ -41,6 +44,7 @@ class MultipleDataSourceAutoConfiguration(var multipleDataSourceProperties: Mult
             this.initDataSourceTransactionManager(dataSource)
             this.initSqlSessionTemplate(dataSource)
             this.initMapperScan(dataSource)
+            this.multipleDataSource.generate()
         }
     }
 
