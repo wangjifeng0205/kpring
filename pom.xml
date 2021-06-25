@@ -11,7 +11,6 @@
         <module>kpring-commons</module>
         <module>kpring-service</module>
         <module>kpring-cloud</module>
-        <module>kpring-datasource</module>
         <module>kpring-generator</module>
     </modules>
     <packaging>pom</packaging>
