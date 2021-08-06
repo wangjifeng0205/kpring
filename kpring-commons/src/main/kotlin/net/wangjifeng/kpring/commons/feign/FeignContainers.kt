@@ -27,7 +27,7 @@ inline fun <reified T : Any> FeignContainer.getFeignClient(): T? {
     for (feignClient in this.feignClientCenter) {
         if (feignClient.clazz == T::class) {
             @Suppress("UNCHECKED_CAST")
-            return feignClient.feignClient as T?
+            return feignClient.feignClient as? T?
         }
     }
     return null
