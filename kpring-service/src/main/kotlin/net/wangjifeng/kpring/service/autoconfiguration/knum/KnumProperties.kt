@@ -15,7 +15,7 @@ data class KnumProperties(
     /**
      * knum所在的包名
      */
-    var packageName: String = "",
+    var packageName: String = "*",
 
     /**
      * 是否启用knum收集器

@@ -33,4 +33,9 @@ interface Knum {
      */
     fun knumOrdinal(): Int = (this as Enum<*>).ordinal
 
+    /**
+     * 返回K枚举的其他扩展方法。
+     */
+    fun knumFunSignatures(): List<KnumFunSignature<*>> = mutableListOf()
+
 }

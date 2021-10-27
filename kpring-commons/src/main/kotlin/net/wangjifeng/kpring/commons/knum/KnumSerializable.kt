@@ -3,10 +3,15 @@ package net.wangjifeng.kpring.commons.knum
 import com.fasterxml.jackson.core.JsonGenerator
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.core.JsonToken
-import com.fasterxml.jackson.databind.*
+import com.fasterxml.jackson.databind.BeanProperty
+import com.fasterxml.jackson.databind.DeserializationContext
+import com.fasterxml.jackson.databind.JsonDeserializer
+import com.fasterxml.jackson.databind.SerializerProvider
 import com.fasterxml.jackson.databind.deser.ContextualDeserializer
 import com.fasterxml.jackson.databind.ser.std.StdSerializer
 import java.io.IOException
+import java.math.BigDecimal
+import java.math.BigInteger
 
 /**
  * @author: wjf
@@ -27,6 +32,22 @@ class KnumJsonSerializer : StdSerializer<Knum>(Knum::class.java) {
         jsonGenerator.writeString(knum.knumName())
         jsonGenerator.writeFieldName("description")
         jsonGenerator.writeString(knum.description())
+
+        val knumFunSignatures = knum.knumFunSignatures()
+        if (knumFunSignatures.isNotEmpty()) {
+            knumFunSignatures.forEach {
+                jsonGenerator.writeFieldName(it.varName)
+                when (it.returnType) {
+                    Int::class -> jsonGenerator.writeNumber(it.invoke(knum) as Int)
+                    Long::class -> jsonGenerator.writeNumber(it.invoke(knum) as Long)
+                    String::class -> jsonGenerator.writeString(it.invoke(knum) as String)
+                    Boolean::class -> jsonGenerator.writeBoolean(it.invoke(knum) as Boolean)
+                    BigDecimal::class -> jsonGenerator.writeNumber(it.invoke(knum) as BigDecimal)
+                    BigInteger::class -> jsonGenerator.writeNumber(it.invoke(knum) as BigInteger)
+                }
+            }
+        }
+
         jsonGenerator.writeEndObject()
     }
 
