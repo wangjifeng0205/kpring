@@ -23,7 +23,7 @@
 
     <properties>
         <!--第三方依赖-->
-        <kotlin.version>1.5.10</kotlin.version>
+        <kotlin.version>1.5.31</kotlin.version>
         <kotlinx-coroutines.version>1.5.0</kotlinx-coroutines.version>
         <springboot.version>2.5.0</springboot.version>
         <springcloud.version>2.2.1.RELEASE</springcloud.version>
