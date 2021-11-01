@@ -37,13 +37,14 @@ class KnumJsonSerializer : StdSerializer<Knum>(Knum::class.java) {
         if (knumFunSignatures.isNotEmpty()) {
             knumFunSignatures.forEach {
                 jsonGenerator.writeFieldName(it.varName)
-                when (it.returnType) {
+                when (val returnType = it.getKnumFun(knum::class).returnType) {
                     Int::class -> jsonGenerator.writeNumber(it.invoke(knum) as Int)
                     Long::class -> jsonGenerator.writeNumber(it.invoke(knum) as Long)
                     String::class -> jsonGenerator.writeString(it.invoke(knum) as String)
                     Boolean::class -> jsonGenerator.writeBoolean(it.invoke(knum) as Boolean)
                     BigDecimal::class -> jsonGenerator.writeNumber(it.invoke(knum) as BigDecimal)
                     BigInteger::class -> jsonGenerator.writeNumber(it.invoke(knum) as BigInteger)
+                    else -> throw IllegalArgumentException("不支持的序列化类型${returnType.typeName}，仅支持[int, long, string, boolean, bigDecimal, bigInt]。")
                 }
             }
         }

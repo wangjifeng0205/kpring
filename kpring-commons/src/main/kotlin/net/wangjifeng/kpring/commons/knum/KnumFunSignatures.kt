@@ -1,5 +1,6 @@
 package net.wangjifeng.kpring.commons.knum
 
+import java.lang.reflect.Method
 import java.math.BigDecimal
 import java.math.BigInteger
 import kotlin.reflect.KClass
@@ -20,8 +21,6 @@ class KnumFunSignature<T : Any> private constructor() {
 
     var funName: String = ""
 
-    var returnType: KClass<T>? = null
-
     var varName: String = ""
 
     fun invoke(knum: Knum): T? {
@@ -30,30 +29,23 @@ class KnumFunSignature<T : Any> private constructor() {
                 throw IllegalArgumentException("KnumFunSignature.varName 不能是null或者空字符串。")
             }
         }
-        if (this.funName.isBlank() || this.returnType == null) {
+        if (this.funName.isBlank()) {
             return null
         }
-        val knumClass = knum::class.java
-        val method = knumClass.getMethod(this.funName)
         @Suppress("UNCHECKED_CAST")
-        return method.invoke(knum) as T?
+        return getKnumFun(knum::class).invoke(knum) as T?
+    }
+
+    fun getKnumFun(knumClass: KClass<out Knum>): Method {
+        return knumClass.java.getMethod(this.funName)
     }
 
     companion object {
 
-        fun <T : Any> knumFunSignatureOf(funName: String, returnType: KClass<T>, varName: String): KnumFunSignature<T> {
-            if (!returnTypeContainer.contains(returnType)) {
-                throw IllegalArgumentException(
-                    """
-                        KnumFunSignature.knumFunSignatureOf()函数的参数returnType只能是这些类型: 
-                        [int, long, string, boolean, bigDecimal, bigInt]。
-                    """.trimIndent()
-                )
-            }
+        fun <T : Any> knumFunSignatureOf(funName: String, varName: String): KnumFunSignature<T> {
             val knumFunSignature = KnumFunSignature<T>()
             knumFunSignature.apply {
                 this.funName = funName
-                this.returnType = returnType
                 this.varName = varName
             }
             return knumFunSignature
