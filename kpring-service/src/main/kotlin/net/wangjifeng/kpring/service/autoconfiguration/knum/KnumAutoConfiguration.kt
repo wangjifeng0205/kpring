@@ -7,6 +7,7 @@ import org.reflections.scanners.SubTypesScanner
 import org.reflections.util.ClasspathHelper
 import org.reflections.util.ConfigurationBuilder
 import org.reflections.util.FilterBuilder
+import org.springframework.beans.factory.InitializingBean
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Configuration
 
@@ -19,10 +20,15 @@ import org.springframework.context.annotation.Configuration
  */
 @Configuration
 @EnableConfigurationProperties(KnumProperties::class)
-class KnumAutoConfiguration(var knumProperties: KnumProperties) : KnumFinder {
+class KnumAutoConfiguration(var knumProperties: KnumProperties) : KnumFinder, InitializingBean {
+
+    private val map = mutableMapOf<String, List<Knum>>()
 
     override fun finding(): Map<String, List<Knum>> {
-        val map = mutableMapOf<String, List<Knum>>()
+        return map
+    }
+
+    override fun afterPropertiesSet() {
         if (knumProperties.enabled) {
 
             val reflections = Reflections(
@@ -45,7 +51,6 @@ class KnumAutoConfiguration(var knumProperties: KnumProperties) : KnumFinder {
                 }
             }
         }
-        return map
     }
 
 }
