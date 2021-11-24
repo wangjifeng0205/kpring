@@ -14,8 +14,8 @@
           <option name="additionalArguments" value="-java-parameters" />
         </compilerSettings>
         <compilerArguments>
-          <option name="languageVersion" value="1.5" />
-          <option name="apiVersion" value="1.5" />
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.6" />
           <option name="pluginOptions">
             <array>
               <option value="plugin:org.jetbrains.kotlin.allopen:annotation=org.springframework.stereotype.Component" />
@@ -51,9 +51,9 @@
     <orderEntry type="library" name="Maven: org.mybatis.generator:mybatis-generator-core:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis.dynamic-sql:mybatis-dynamic-sql:1.3.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.5.31" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.6.0" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.5.31" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.6.0" level="project" />
   </component>
 </module>
